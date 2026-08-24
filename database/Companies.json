@@ -1,0 +1,56 @@
+[
+  {
+    "position": "Frontend Developer Intern",
+    "company": "TMS",
+    "duration": "8 July 2026 - 2 September 2026",
+    "location": "On-site / Remote",
+    "image": "/company/tentwenty.svg",
+    "url": "",
+    "responsibilities": [
+      "Built animation-focused web interfaces using React JS and modern CSS.",
+      "Collaborated on responsive design implementations and performance optimization.",
+      "Delivered clean, accessible code for client projects."
+    ],
+    "color": {
+      "h": "330",
+      "s": "80%",
+      "l": "65%"
+    }
+  },
+  {
+    "position": "Graphic Designer",
+    "company": "TMS",
+    "duration": "12 January 2026 - 28 February 2026",
+    "location": "On-site / Remote",
+    "image": "/company/denge-bilgisayar.svg",
+    "url": "",
+    "responsibilities": [
+      "Designed creative graphic assets, visual layouts, and UI prototypes.",
+      "Created digital branding materials and vector illustrations.",
+      "Worked closely with the development team to ensure design fidelity."
+    ],
+    "color": {
+      "h": "340",
+      "s": "75%",
+      "l": "60%"
+    }
+  },
+  {
+    "position": "Frontend Developer Intern",
+    "company": "TMS",
+    "duration": "23 June 2025 - 1 September 2025",
+    "location": "On-site / Remote",
+    "image": "/company/agency-look.svg",
+    "url": "",
+    "responsibilities": [
+      "Developed responsive HTML/CSS page components.",
+      "Assisted senior developers with frontend bug fixes and UI updates.",
+      "Gained hands-on experience with web standards and frontend frameworks."
+    ],
+    "color": {
+      "h": "320",
+      "s": "70%",
+      "l": "55%"
+    }
+  }
+]

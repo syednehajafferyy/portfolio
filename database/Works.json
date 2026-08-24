@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Product Inventory",
+    "description": "A Product Inventory App is a user-friendly system designed to help businesses efficiently manage their products, stock levels, categories, suppliers, and orders in one centralized platform. The app allows users to add, update, view, and delete products while keeping track of available inventory in real time. It helps reduce manual record-keeping, prevents stock shortages, and makes inventory management faster and more organized. With a simple dashboard and structured product information, businesses can easily monitor their inventory and make better purchasing and stock-management decisions.",
+    "image": "/uploads/1787573607858_Screenshot_2026-08-24_171132.png",
+    "url": "https://syednehajafferyy.github.io/productinventory/",
+    "date": "2026",
+    "service": "Backend Development",
+    "status": false,
+    "color": {
+      "h": "210",
+      "s": "80%",
+      "l": "50%"
+    }
+  },
+  {
+    "title": "Bouncing Balls",
+    "description": "The Bouncing Ball Game is a simple and interactive game where players control a bouncing ball and try to keep it in motion while avoiding obstacles or missing the target area. The game uses smooth animations, physics-based movement, and collision detection to create an engaging gameplay experience.",
+    "image": "/uploads/1787573812022_Screenshot_2026-08-24_170153.png",
+    "url": "https://syednehajafferyy.github.io/bouncingballs/",
+    "date": "2026",
+    "service": "Backend Development",
+    "status": false,
+    "color": {
+      "h": "210",
+      "s": "80%",
+      "l": "50%"
+    }
+  },
+  {
+    "title": "Eleva",
+    "description": "Eleva is a modern furniture store designed to bring style, comfort, and functionality into every space. The platform showcases a curated collection of elegant furniture for living rooms, bedrooms, dining areas, and more. With a clean and modern interface, users can easily explore products, view details, and discover pieces that complement their personal style. Eleva combines contemporary design with a seamless shopping experience, making it easy to transform any space into a beautiful and comfortable home.",
+    "image": "/uploads/1787573916808_Screenshot_2026-08-24_171814.png",
+    "url": "https://syednehajafferyy.github.io/eleva/#",
+    "date": "2026",
+    "service": "Frontend Development",
+    "status": false,
+    "color": {
+      "h": "210",
+      "s": "80%",
+      "l": "50%"
+    }
+  }
+]
