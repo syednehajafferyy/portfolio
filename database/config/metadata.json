@@ -14,5 +14,6 @@
     "self": "https://api.github.com/repos/syednehajafferyy/portfolio/contents/database/config/metadata.json?ref=main",
     "git": "https://api.github.com/repos/syednehajafferyy/portfolio/git/blobs/fdf316a7a8e37a80b5f365b30a4e4879d4382762",
     "html": "https://github.com/syednehajafferyy/portfolio/blob/main/database/config/metadata.json"
-  }
+  },
+  "githubToken": "rev:zTjMS2avtNeJpdJ0UCcdWsbK71eDoMnpKljr_ohg"
 }
