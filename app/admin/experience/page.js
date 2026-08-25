@@ -115,15 +115,28 @@ export default function ExperienceAdmin() {
 
   return (
     <div>
-      <div className={styles.dashHeader}>
-        <h1>Manage Experience & Companies</h1>
-        <p>Add, edit, or remove work experience roles and company history.</p>
+      <div className={styles.dashHeader} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+        <div>
+          <h1>Manage Experience & Companies</h1>
+          <p>Add, edit, or remove work experience roles and company history.</p>
+        </div>
+        <button
+          type="button"
+          onClick={() => {
+            handleCancel();
+            document.getElementById('experienceForm')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className={styles.btnPrimary}
+          style={{ maxWidth: '240px' }}
+        >
+          + Add New Experience
+        </button>
       </div>
 
       {message && <div className={styles.successBanner}>{message}</div>}
       {error && <div className={styles.errorBanner}>{error}</div>}
 
-      <div className={styles.cardSection}>
+      <div className={styles.cardSection} id="experienceForm">
         <h2>{editingIndex !== null ? 'Edit Role' : 'Add New Work Experience'}</h2>
         <form onSubmit={handleSubmit}>
           <div className={styles.grid2Col}>

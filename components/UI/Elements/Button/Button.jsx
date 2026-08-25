@@ -18,7 +18,7 @@ export default function FancyButton({element, type, link, target, theme, isEnabl
         )
     } else {
         return (
-            <Link href={link} target={target} className={`${styles.button} ${btnClass}`} disabled={!isEnabled}>
+            <Link href={link || '#'} target={target} className={`${styles.button} ${btnClass}`}>
                 <span className={styles.border}></span>
                 <span className={styles.ripple}>
                     <span></span>
