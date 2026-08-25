@@ -20,19 +20,27 @@ export async function POST(request) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Ensure public/uploads directory exists
-    const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
-    await fs.promises.mkdir(uploadsDir, { recursive: true });
-
-    // Clean file name
     const sanitizedOriginalName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
     const fileName = `${Date.now()}_${sanitizedOriginalName}`;
-    const filePath = path.join(uploadsDir, fileName);
 
-    await fs.promises.writeFile(filePath, buffer);
-
-    const publicUrl = `/uploads/${fileName}`;
-    return NextResponse.json({ success: true, url: publicUrl, fileName });
+    try {
+      const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+      if (!fs.existsSync(uploadsDir)) {
+        fs.mkdirSync(uploadsDir, { recursive: true });
+      }
+      const filePath = path.join(uploadsDir, fileName);
+      fs.writeFileSync(filePath, buffer);
+      return NextResponse.json({ success: true, url: `/uploads/${fileName}`, fileName });
+    } catch (fsErr) {
+      // Fallback for Vercel / read-only file systems (convert image to Base64 Data URL)
+      if (fsErr.code === 'EROFS' || fsErr.code === 'EACCES' || (fsErr.message && fsErr.message.includes('read-only'))) {
+        const mimeType = file.type || 'image/jpeg';
+        const base64 = buffer.toString('base64');
+        const dataUrl = `data:${mimeType};base64,${base64}`;
+        return NextResponse.json({ success: true, url: dataUrl, fileName });
+      }
+      throw fsErr;
+    }
   } catch (error) {
     console.error('File upload error:', error);
     return NextResponse.json({ error: 'Failed to upload image' }, { status: 500 });
