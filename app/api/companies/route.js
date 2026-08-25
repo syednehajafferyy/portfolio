@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
 import { readData, writeData } from '@/lib/db';
 import { getAdminSession } from '@/lib/auth';
+import { revalidatePath } from 'next/cache';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function GET() {
   const data = await readData('Companies');
@@ -16,6 +20,12 @@ export async function PUT(request) {
   try {
     const updatedCompanies = await request.json();
     await writeData('Companies', updatedCompanies);
+
+    try {
+      revalidatePath('/', 'layout');
+      revalidatePath('/admin', 'layout');
+    } catch (_) {}
+
     return NextResponse.json({ success: true, data: updatedCompanies });
   } catch (error) {
     console.error('API Error updating companies:', error);

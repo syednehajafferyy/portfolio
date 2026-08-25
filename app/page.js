@@ -6,6 +6,9 @@ import SkillSet from "@/components/Blocks/SkillSet/SkillSet";
 import BoldTitle from "@/components/UI/Cards/BoldTitle/BoldTitle";
 import Gallery from "@/components/Blocks/Gallery/Gallery";
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default function Home() {
     return (
         <>

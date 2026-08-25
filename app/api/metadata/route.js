@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
 import { readData, writeData } from '@/lib/db';
 import { getAdminSession } from '@/lib/auth';
+import { revalidatePath } from 'next/cache';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function GET() {
   const data = await readData('metadata');
@@ -16,6 +20,12 @@ export async function PUT(request) {
   try {
     const updatedMetadata = await request.json();
     await writeData('metadata', updatedMetadata);
+
+    try {
+      revalidatePath('/', 'layout');
+      revalidatePath('/admin', 'layout');
+    } catch (_) {}
+
     return NextResponse.json({ success: true, data: updatedMetadata });
   } catch (error) {
     console.error('API Error updating metadata:', error);
