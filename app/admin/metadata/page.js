@@ -52,6 +52,7 @@ export default function MetadataAdmin() {
             personal: { ...prev.personal, ...(data.personal || {}) },
             social: { ...prev.social, ...(data.social || {}) },
             content: { ...prev.content, ...(data.content || {}) },
+            githubToken: data.githubToken || ''
           }));
         }
       } catch (err) {
@@ -87,7 +88,11 @@ export default function MetadataAdmin() {
       const data = await res.json();
 
       if (res.ok && data.success) {
-        setMessage('Personal and site details updated successfully!');
+        if (data.warning) {
+          setError(data.warning);
+        } else {
+          setMessage('Personal and site details updated successfully and synced to GitHub!');
+        }
       } else {
         setError(data.error || 'Failed to save updates');
       }

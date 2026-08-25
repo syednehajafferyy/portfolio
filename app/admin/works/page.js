@@ -94,7 +94,11 @@ export default function WorksAdmin() {
       const data = await res.json();
       if (res.ok && data.success) {
         setWorks(newWorks);
-        setMessage('Portfolio projects updated successfully!');
+        if (data.warning) {
+          setError(data.warning);
+        } else {
+          setMessage('Portfolio projects updated successfully and synced to GitHub!');
+        }
       } else {
         setError(data.error || 'Failed to save projects');
       }

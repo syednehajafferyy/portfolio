@@ -83,7 +83,11 @@ export default function SkillsAdmin() {
       const data = await res.json();
       if (res.ok && data.success) {
         setSkills(newSkills);
-        setMessage('Skills updated successfully!');
+        if (data.warning) {
+          setError(data.warning);
+        } else {
+          setMessage('Skills updated successfully and synced to GitHub!');
+        }
       } else {
         setError(data.error || 'Failed to save skills');
       }

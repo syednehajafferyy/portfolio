@@ -102,7 +102,11 @@ export default function ExperienceAdmin() {
       const data = await res.json();
       if (res.ok && data.success) {
         setCompanies(newCompanies);
-        setMessage('Experience items updated successfully!');
+        if (data.warning) {
+          setError(data.warning);
+        } else {
+          setMessage('Experience items updated successfully and synced to GitHub!');
+        }
       } else {
         setError(data.error || 'Failed to save experience records');
       }

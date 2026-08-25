@@ -8,7 +8,11 @@ export const revalidate = 0;
 
 export async function GET() {
   const data = await readData('Companies');
-  return NextResponse.json(data || []);
+  return NextResponse.json(data || [], {
+    headers: {
+      'Cache-Control': 'no-store, max-age=0, must-revalidate'
+    }
+  });
 }
 
 export async function PUT(request) {
@@ -19,16 +23,22 @@ export async function PUT(request) {
 
   try {
     const updatedCompanies = await request.json();
-    await writeData('Companies', updatedCompanies);
+    const result = await writeData('Companies', updatedCompanies);
 
     try {
       revalidatePath('/', 'layout');
       revalidatePath('/admin', 'layout');
     } catch (_) {}
 
-    return NextResponse.json({ success: true, data: updatedCompanies });
+    return NextResponse.json({
+      success: true,
+      data: updatedCompanies,
+      synced: result.synced,
+      warning: result.warning
+    });
   } catch (error) {
     console.error('API Error updating companies:', error);
     return NextResponse.json({ error: error.message || 'Failed to update companies' }, { status: 500 });
   }
 }
+
