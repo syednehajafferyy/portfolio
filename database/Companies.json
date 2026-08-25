@@ -1,15 +1,15 @@
 [
   {
-    "position": "Frontend Developer Intern",
+    "position": "Backend Developer Intern",
     "company": "TMS",
     "duration": "8 July 2026 - 2 September 2026",
     "location": "On-site / Remote",
     "image": "/company/tentwenty.svg",
     "url": "",
     "responsibilities": [
-      "Built animation-focused web interfaces using React JS and modern CSS.",
-      "Collaborated on responsive design implementations and performance optimization.",
-      "Delivered clean, accessible code for client projects."
+      "Built resilient backend APIs and server-side services.",
+      "Collaborated on database integration, API development, and performance optimization.",
+      "Delivered clean, secure, and maintainable backend code for client projects."
     ],
     "color": {
       "h": "330",

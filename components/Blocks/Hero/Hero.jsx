@@ -149,7 +149,7 @@ export default function Hero() {
                     <div className={styles.inner}>
                         <div className={styles.title}>
                             <h1 ref={textRef}>
-                                I&apos;m {config.personal?.name || 'Syed'} <span className={`${styles.icon}`}>
+                                I&apos;m {config.personal?.surname ? `${config.personal?.name} ${config.personal?.surname}` : (config.personal?.name || 'Neha Zehra')} <span className={`${styles.icon}`}>
                                     <span className={styles.reveal}></span>
                                     <Image
                                         src="/hero-image.jpg"

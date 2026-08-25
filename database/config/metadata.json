@@ -1,22 +1,22 @@
 {
   "metadata": {
-    "name": "Syed",
-    "title": "Syed - Full Stack & Creative Developer",
+    "name": "Neha",
+    "title": "Neha Zehra - Creative Developer",
     "description": "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.",
-    "timeZone": "America/New_York",
+    "timeZone": "UTC",
     "locale": "en-US"
   },
   "personal": {
-    "name": "Syed",
-    "surname": "",
-    "role": "Full Stack Developer",
+    "name": "Neha",
+    "surname": "Zehra",
+    "role": "Creative Developer",
     "experience": 2,
-    "email": "contact@example.com",
-    "phone": "+1 (555) 000-0000",
-    "city": "New York",
-    "state": "NY",
-    "country": "USA",
-    "username": "@syed",
+    "email": "nehazehra@example.com",
+    "phone": "+1234567890",
+    "city": "",
+    "state": "",
+    "country": "",
+    "username": "@nehazehra",
     "resumeURL": "#"
   },
   "social": {

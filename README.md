@@ -1,4 +1,4 @@
-# 🚀 Syed - Full Stack Developer Portfolio
+# 🚀 Neha Zehra - Creative Developer Portfolio
 
 A modern, highly interactive, and responsive web application portfolio built with **Next.js 14**, **React**, **GSAP animations**, **Pure CSS Modules**, and a **custom Backend API with a protected Admin Control Panel**.
 
@@ -84,10 +84,10 @@ To access the admin control panel and update your portfolio data dynamically:
 
 ---
 
-## 👨‍💻 Author
+## 👩‍💻 Author
 
-**Syed**  
-*Full Stack & Creative Developer*
+**Neha Zehra**  
+*Creative Developer*
 
 ---
 

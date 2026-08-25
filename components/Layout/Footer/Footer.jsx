@@ -85,10 +85,6 @@ export default function Footer() {
                         Vercel,&nbsp;
                         Next.js, and &nbsp;
                         <Link href={commonConfig.social?.github || '#'}>GitHub</Link>.
-                        <br/>
-                        {`${commonConfig.personal.city}, ${commonConfig.personal.state} ${currentTime}`}&nbsp;
-                        •&nbsp;
-                        <WeatherAPI></WeatherAPI>
                     </div>
                     <div className={styles.verse}>{commonConfig.content.verse}</div>
                 </div>
