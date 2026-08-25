@@ -1,19 +1,33 @@
 {
-  "name": "metadata.json",
-  "path": "database/config/metadata.json",
-  "sha": "fdf316a7a8e37a80b5f365b30a4e4879d4382762",
-  "size": 912,
-  "url": "https://api.github.com/repos/syednehajafferyy/portfolio/contents/database/config/metadata.json?ref=main",
-  "html_url": "https://github.com/syednehajafferyy/portfolio/blob/main/database/config/metadata.json",
-  "git_url": "https://api.github.com/repos/syednehajafferyy/portfolio/git/blobs/fdf316a7a8e37a80b5f365b30a4e4879d4382762",
-  "download_url": "https://raw.githubusercontent.com/syednehajafferyy/portfolio/main/database/config/metadata.json",
-  "type": "file",
-  "content": "ewogICJtZXRhZGF0YSI6IHsKICAgICJuYW1lIjogIk5laGEiLAogICAgInRp\ndGxlIjogIk5laGEgWmVocmEgLSBDcmVhdGl2ZSBEZXZlbG9wZXIiLAogICAg\nImRlc2NyaXB0aW9uIjogIkkgZGV2ZWxvcCBhY2Nlc3NpYmxlLCByZXNwb25z\naXZlLCBpbnRlcmFjdGl2ZSwgYW5kIGFuaW1hdGVkIHdlYnNpdGVzIHdpdGgg\nYSBzdHJvbmcgZm9jdXMgb24gcGVyZm9ybWFuY2UuIiwKICAgICJ0aW1lWm9u\nZSI6ICJVVEMiLAogICAgImxvY2FsZSI6ICJlbi1VUyIKICB9LAogICJwZXJz\nb25hbCI6IHsKICAgICJuYW1lIjogIk5laGEiLAogICAgInN1cm5hbWUiOiAi\nWmVocmEiLAogICAgInJvbGUiOiAiQ3JlYXRpdmUgRGV2ZWxvcGVyIiwKICAg\nICJleHBlcmllbmNlIjogMiwKICAgICJlbWFpbCI6ICJuZWhhemVocmFAZXhh\nbXBsZS5jb20iLAogICAgInBob25lIjogIisxMjM0NTY3ODkwIiwKICAgICJj\naXR5IjogIiIsCiAgICAic3RhdGUiOiAiIiwKICAgICJjb3VudHJ5IjogIiIs\nCiAgICAidXNlcm5hbWUiOiAiQG5laGF6ZWhyYSIsCiAgICAicmVzdW1lVVJM\nIjogIiMiCiAgfSwKICAic29jaWFsIjogewogICAgInR3aXR0ZXIiOiAiaHR0\ncHM6Ly90d2l0dGVyLmNvbS8iLAogICAgImluc3RhZ3JhbSI6ICIiLAogICAg\nImxpbmtlZGluIjogImh0dHBzOi8vbGlua2VkaW4uY29tLyIsCiAgICAiZ2l0\naHViIjogImh0dHBzOi8vZ2l0aHViLmNvbS8iLAogICAgImNvZGVwZW4iOiAi\naHR0cHM6Ly9jb2RlcGVuLmlvLyIKICB9LAogICJjb250ZW50IjogewogICAg\nInZlcnNlIjogIkkgZGV2ZWxvcCBhY2Nlc3NpYmxlLCByZXNwb25zaXZlLCBp\nbnRlcmFjdGl2ZSwgYW5kIGFuaW1hdGVkIHdlYiBhcHBsaWNhdGlvbnMgd2l0\naCBhIHN0cm9uZyBmb2N1cyBvbiBwZXJmb3JtYW5jZSBhbmQgbW9kZXJuIGRl\nc2lnbi4iCiAgfQp9\n",
-  "encoding": "base64",
-  "_links": {
-    "self": "https://api.github.com/repos/syednehajafferyy/portfolio/contents/database/config/metadata.json?ref=main",
-    "git": "https://api.github.com/repos/syednehajafferyy/portfolio/git/blobs/fdf316a7a8e37a80b5f365b30a4e4879d4382762",
-    "html": "https://github.com/syednehajafferyy/portfolio/blob/main/database/config/metadata.json"
+  "metadata": {
+    "name": "Neha",
+    "title": "Neha Zehra - Creative Developer",
+    "description": "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.",
+    "timeZone": "UTC",
+    "locale": "en-US"
   },
-  "githubToken": "rev:zTjMS2avtNeJpdJ0UCcdWsbK71eDoMnpKljr_ohg"
+  "personal": {
+    "name": "Neha",
+    "surname": "Zehra",
+    "role": "Creative Developer",
+    "experience": 2,
+    "email": "nehazehra@example.com",
+    "phone": "+1234567890",
+    "city": "",
+    "state": "",
+    "country": "",
+    "username": "@nehazehra",
+    "resumeURL": "#"
+  },
+  "social": {
+    "twitter": "https://twitter.com/",
+    "instagram": "",
+    "linkedin": "https://linkedin.com/",
+    "github": "https://github.com/",
+    "codepen": "https://codepen.io/"
+  },
+  "content": {
+    "verse": "I develop accessible, responsive, interactive, and animated web applications with a strong focus on performance and modern design."
+  },
+  "githubToken": "rev:zTjSMjAvtNepJpd0UCdcKWsbT71eDMoMnKpKljr_ohg"
 }
