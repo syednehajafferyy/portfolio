@@ -15,12 +15,10 @@ export async function PUT(request) {
 
   try {
     const updatedSkills = await request.json();
-    const success = await writeData('Skills', updatedSkills);
-    if (!success) {
-      return NextResponse.json({ error: 'Failed to update skills' }, { status: 500 });
-    }
+    await writeData('Skills', updatedSkills);
     return NextResponse.json({ success: true, data: updatedSkills });
   } catch (error) {
-    return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });
+    console.error('API Error updating skills:', error);
+    return NextResponse.json({ error: error.message || 'Failed to update skills' }, { status: 500 });
   }
 }

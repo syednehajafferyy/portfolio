@@ -15,12 +15,10 @@ export async function PUT(request) {
 
   try {
     const updatedWorks = await request.json();
-    const success = await writeData('Works', updatedWorks);
-    if (!success) {
-      return NextResponse.json({ error: 'Failed to update works' }, { status: 500 });
-    }
+    await writeData('Works', updatedWorks);
     return NextResponse.json({ success: true, data: updatedWorks });
   } catch (error) {
-    return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });
+    console.error('API Error updating works:', error);
+    return NextResponse.json({ error: error.message || 'Failed to update works' }, { status: 500 });
   }
 }

@@ -15,12 +15,10 @@ export async function PUT(request) {
 
   try {
     const updatedMetadata = await request.json();
-    const success = await writeData('metadata', updatedMetadata);
-    if (!success) {
-      return NextResponse.json({ error: 'Failed to update metadata' }, { status: 500 });
-    }
+    await writeData('metadata', updatedMetadata);
     return NextResponse.json({ success: true, data: updatedMetadata });
   } catch (error) {
-    return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });
+    console.error('API Error updating metadata:', error);
+    return NextResponse.json({ error: error.message || 'Failed to update metadata' }, { status: 500 });
   }
 }
