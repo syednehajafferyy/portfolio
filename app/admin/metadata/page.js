@@ -254,6 +254,22 @@ export default function MetadataAdmin() {
           </div>
         </div>
 
+        <div className={styles.cardSection}>
+          <h2>GitHub Auto-Sync (Vercel Persistence)</h2>
+          <p style={{ color: '#94a3b8', fontSize: '1.3rem', marginBottom: '1rem' }}>
+            Enter a GitHub Personal Access Token (or set GITHUB_TOKEN in Vercel env) so Admin Panel updates automatically commit to your GitHub repository and redeploy Vercel permanently.
+          </p>
+          <div className={styles.formGroup}>
+            <label>GitHub Personal Access Token (Optional)</label>
+            <input
+              type="password"
+              placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+              value={formData.githubToken || ''}
+              onChange={(e) => setFormData((prev) => ({ ...prev, githubToken: e.target.value }))}
+            />
+          </div>
+        </div>
+
         <button type="submit" className={styles.btnPrimary} style={{ maxWidth: '300px' }} disabled={saving}>
           {saving ? 'Saving...' : 'Save All Changes'}
         </button>
