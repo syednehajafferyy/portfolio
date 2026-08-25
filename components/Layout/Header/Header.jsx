@@ -29,8 +29,9 @@ export default function Header() {
     return (
         <header className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''}`}>
             <div className={styles.inner}>
-                <Logo classVariable={styles.logo}></Logo>
-                <div className={styles.location}>{`${commonConfig.personal.city}, ${commonConfig.personal.state} ${currentTime}`}</div>
+                {commonConfig.personal.city ? (
+                    <div className={styles.location}>{`${commonConfig.personal.city}${commonConfig.personal.state ? `, ${commonConfig.personal.state}` : ''} ${currentTime}`}</div>
+                ) : null}
                 <div className={styles.openToWork}><span></span> Open To Work</div>
                 <Navigation isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen}></Navigation>
                 <button type={'button'} className={styles.menuToggle} onClick={toggleMenu}>
