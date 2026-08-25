@@ -32,8 +32,8 @@ export default function AdminDashboard() {
           skillsCount: Array.isArray(skills) ? skills.length : 0,
           experienceCount: Array.isArray(exp) ? exp.length : 0,
           projectsCount: Array.isArray(works) ? works.length : 0,
-          ownerName: meta?.personal?.name || 'Admin',
-          role: meta?.personal?.role || 'Developer',
+          ownerName: meta?.personal?.surname ? `${meta.personal.name} ${meta.personal.surname}` : (meta?.personal?.name || 'Neha Zehra'),
+          role: meta?.personal?.role || 'Creative Developer',
         });
       } catch (err) {
         console.error('Failed to load admin stats:', err);
@@ -53,7 +53,7 @@ export default function AdminDashboard() {
       <div className={styles.statsGrid}>
         <div className={styles.statCard}>
           <h3>Current Role</h3>
-          <div className={styles.number} style={{ fontSize: '2rem', marginTop: '0.5rem' }}>
+          <div className={styles.number} style={{ fontSize: '1.8rem', marginTop: '0.5rem' }}>
             {stats.role}
           </div>
         </div>
@@ -61,16 +61,25 @@ export default function AdminDashboard() {
         <div className={styles.statCard}>
           <h3>Total Skills</h3>
           <div className={styles.number}>{stats.skillsCount}</div>
+          <Link href="/admin/skills" style={{ fontSize: '1.2rem', color: '#ffd600', display: 'inline-block', marginTop: '0.5rem' }}>
+            Manage Skills →
+          </Link>
         </div>
 
         <div className={styles.statCard}>
           <h3>Experience Records</h3>
           <div className={styles.number}>{stats.experienceCount}</div>
+          <Link href="/admin/experience" style={{ fontSize: '1.2rem', color: '#ffd600', display: 'inline-block', marginTop: '0.5rem' }}>
+            Manage Experience →
+          </Link>
         </div>
 
         <div className={styles.statCard}>
           <h3>Portfolio Projects</h3>
           <div className={styles.number}>{stats.projectsCount}</div>
+          <Link href="/admin/works" style={{ fontSize: '1.2rem', color: '#ffd600', display: 'inline-block', marginTop: '0.5rem' }}>
+            Manage Projects →
+          </Link>
         </div>
       </div>
 
@@ -84,6 +93,26 @@ export default function AdminDashboard() {
             </p>
             <Link href="/admin/metadata" className={styles.btnSecondary} style={{ display: 'inline-block' }}>
               Edit Personal Info →
+            </Link>
+          </div>
+
+          <div style={{ background: '#11141c', padding: '2rem', borderRadius: '8px', border: '1px solid #262c3a' }}>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '1rem' }}>Work Experience & Companies</h3>
+            <p style={{ color: '#94a3b8', fontSize: '1.3rem', marginBottom: '1.5rem' }}>
+              Add new work experience roles, internship history, company logos, dates, and bullet points.
+            </p>
+            <Link href="/admin/experience" className={styles.btnSecondary} style={{ display: 'inline-block' }}>
+              Manage Experience →
+            </Link>
+          </div>
+
+          <div style={{ background: '#11141c', padding: '2rem', borderRadius: '8px', border: '1px solid #262c3a' }}>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '1rem' }}>Skills & Frameworks</h3>
+            <p style={{ color: '#94a3b8', fontSize: '1.3rem', marginBottom: '1.5rem' }}>
+              Add, edit, or remove technical skills, frontend/backend tools, frameworks, and icons.
+            </p>
+            <Link href="/admin/skills" className={styles.btnSecondary} style={{ display: 'inline-block' }}>
+              Manage Skills →
             </Link>
           </div>
 
