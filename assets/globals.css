@@ -1,0 +1,190 @@
+:root {
+  --font-alt: "Libre Baskerville", serif;
+  --font-primary: "Manrope", sans-serif;
+  --color-bg: 210, 75%, 98%;
+  --color-bg-alt: 240, 10%, 5%;
+  --color-primary: 50, 100%, 50%;
+  --color-primary-alt: 50, 32%, 42%;
+  --color-alert: 0, 88%, 45%;
+  --color-success: 135, 85%, 55%;
+  --color-white: 0, 0%, 100%;
+  --color-black: 0, 0%, 0%;
+  --color-title: 0, 0%, 0%;
+  --color-body: 213, 9%, 45%;
+  --fs-ms: 1.2rem;
+  --fs-xxs: 1.6rem;
+  --fs-xs: 1.8rem;
+  --fs-sm: 2.0rem;
+  --fs-md: 2.6rem;
+  --fs-lg: 4.8rem;
+  --fs-xl: 7.0rem;
+  --fs-xml: 12rem;
+  --fs-xxl: 16rem;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-regular: 400;
+  --fw-light: 300;
+  --header-height: 22rem;
+  --x-spacing: 9rem;
+  --y-spacing: 24rem;
+}
+@media (max-width: 1366px) and (max-height: 820px) {
+  :root {
+    --header-height: 18rem;
+  }
+}
+@media (max-width: 1366px) {
+  :root {
+    --fs-xml: 10rem;
+  }
+}
+@media (max-width: 1199px) {
+  :root {
+    --fs-xxs: 1.4rem;
+    --fs-xs: 1.6rem;
+    --fs-sm: 1.8rem;
+    --fs-md: 2.4rem;
+    --fs-lg: 3.6rem;
+    --fs-xl: 5.8rem;
+    --fs-xml: 8rem;
+    --fs-xxl: 12rem;
+    --x-spacing: 6rem;
+    --y-spacing: 20rem;
+  }
+}
+@media (max-width: 991px) {
+  :root {
+    --fs-md: 2rem;
+    --fs-xml: 6rem;
+    --fs-xl: 4.8rem;
+    --fs-xxl: 10rem;
+    --y-spacing: 12rem;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --fs-md: 1.8rem;
+    --fs-xml: 5rem;
+    --fs-xl: 4.0rem;
+    --x-spacing: 3rem;
+    --header-height: 14rem;
+  }
+}
+
+/* Box sizing rules */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 62.5%;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Remove list styles on ul and ol */
+ul, ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100dvh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background: hsl(var(--color-bg-alt));
+  font-family: var(--font-primary);
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Create a root stacking context */
+#root, #__next {
+  isolation: isolate;
+}
+
+::selection {
+  color: hsl(var(--color-black));
+  background: hsl(var(--color-primary));
+}
+
+main {
+  min-height: 100vh;
+}
+
+p {
+  font-weight: var(--fw-regular);
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.notFound {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: hsl(var(--color-white));
+  text-align: center;
+}
+.notFound h1.notFoundTitle {
+  font-size: var(--fs-xl);
+}
+.notFound h2.notFoundTitle {
+  font-size: var(--fs-md);
+}
+.notFound p {
+  font-size: var(--fs-sm);
+  color: hsla(var(--color-white), 0.7);
+  margin-bottom: 6rem;
+  margin-top: 3rem;
+}

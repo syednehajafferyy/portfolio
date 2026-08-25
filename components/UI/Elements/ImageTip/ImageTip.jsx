@@ -1,5 +1,5 @@
 import React  from 'react';
-import styles from './ImageTip.module.scss';
+import styles from './ImageTip.module.css';
 import Image from "next/image";
 import commonConfig from "@/database/config/metadata.json";
 
@@ -8,7 +8,7 @@ export default function ImageTip({date, children}) {
         <div className={styles.element}>
             <figure className={styles.figure}>
                 <Image
-                    src="/yasin-genc-photo.jpeg"
+                    src="/avatar.jpg"
                     alt={commonConfig.metadata.title}
                     width={40}
                     height={40}

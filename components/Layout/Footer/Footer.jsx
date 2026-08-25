@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useState, useEffect } from 'react';
-import styles from './Footer.module.scss';
+import styles from './Footer.module.css';
 import Image from "next/image";
 import Link from "next/link";
 import commonConfig from '@/database/config/metadata.json';
@@ -84,7 +84,7 @@ export default function Footer() {
                         Powered by&nbsp;
                         Vercel,&nbsp;
                         Next.js, and &nbsp;
-                        <Link href="https://github.com/yasingencnet/webkit">GitHub</Link>.
+                        <Link href={commonConfig.social?.github || '#'}>GitHub</Link>.
                         <br/>
                         {`${commonConfig.personal.city}, ${commonConfig.personal.state} ${currentTime}`}&nbsp;
                         •&nbsp;

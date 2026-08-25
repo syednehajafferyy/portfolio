@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-import styles from './NavDetailed.module.scss';
+import styles from './NavDetailed.module.css';
 import Link from "next/link";
 import PageList from '@/database/PageList.json';
 import FadeIn from "@/components/UI/FadeIn/FadeIn";

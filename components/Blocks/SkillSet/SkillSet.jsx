@@ -2,7 +2,7 @@
 
 import React, {useRef, useState, useEffect} from 'react';
 
-import styles from './SkillSet.module.scss';
+import styles from './SkillSet.module.css';
 
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import gsap from 'gsap';
 
-import './Particles.module.scss'; // Assuming you have a separate CSS file
+import './Particles.module.css'; // Assuming you have a separate CSS file
 
 export default function Particles({ className }) {
     const sceneRef = useRef(null);

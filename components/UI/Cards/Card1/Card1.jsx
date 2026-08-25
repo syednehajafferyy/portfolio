@@ -1,5 +1,5 @@
 import React  from 'react';
-import styles from './Card1.module.scss';
+import styles from './Card1.module.css';
 import Image from "next/image";
 
 export default function Card1({icon, title, subtitle, description}) {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './SocialLinks.module.scss';
+import styles from './SocialLinks.module.css';
 import initialConfig from "@/database/config/metadata.json";
 import Link from 'next/link';
 import Magnet from "@/components/UI/Magnet/Magnet";

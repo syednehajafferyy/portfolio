@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styles from './Title.module.scss';
+import styles from './Title.module.css';
 
 
 export default function Title({heading, color, children, className}) {

@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import styles from './CustomCursor.module.scss';
+import styles from './CustomCursor.module.css';
 
 export default function CustomCursor() {
     const container = useRef();

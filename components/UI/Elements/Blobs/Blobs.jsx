@@ -1,4 +1,4 @@
-import styles from './Blobs.module.scss';
+import styles from './Blobs.module.css';
 
 export default function Blobs({classVariable, type}) {
     const blobType = type ? type : 'v1';

@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import styles from './TextReveal.module.scss';
+import styles from './TextReveal.module.css';
 
 
 export default function TextReveal({className, children}) {

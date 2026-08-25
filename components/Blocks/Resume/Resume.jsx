@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import styles from './Resume.module.scss';
+import styles from './Resume.module.css';
 
 import Image from "next/image";
 import Container from "@/components/UI/Layout/Layout";
@@ -82,7 +82,7 @@ export default function Resume() {
                                 </p>
                             </div>
                             <figure className={styles.figure}>
-                                <Image src="/yasin-genc-photo.jpeg" alt={config.personal?.name || 'Photo'} width={150} height={150}/>
+                                <Image src="/avatar.jpg" alt={config.personal?.name || 'Photo'} width={150} height={150}/>
                             </figure>
                         </div>
                         <div className={`${styles.card} ${styles.cardV2}`}>

@@ -1,0 +1,243 @@
+.section {
+  position: relative;
+  padding: var(--y-spacing) 0 var(--y-spacing);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background: url("/gradient-blob.svg") center top no-repeat;
+  background-size: contain;
+  padding-top: 3rem;
+}
+@media (max-width: 575px) {
+  .content {
+    align-items: flex-start;
+  }
+}
+
+.cardGroup {
+  position: relative;
+  z-index: 1;
+  margin-bottom: calc(var(--x-spacing) * 1.5);
+}
+.cardGroup:hover .card.cardV1 {
+  transform: rotate(-5deg) translateY(-2%) !important;
+}
+.cardGroup:hover .card.cardV2 {
+  transform: rotate(5deg) translateY(2%) !important;
+}
+.cardGroup:hover .card .figure {
+  top: 10%;
+}
+
+.card {
+  position: relative;
+  background-color: hsla(var(--color-black), 0.2);
+  backdrop-filter: blur(0.4rem);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  aspect-ratio: 3/4;
+  max-width: 38rem;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .card {
+    max-width: 22rem;
+    border-radius: 1rem;
+  }
+}
+.card.cardV1 {
+  /*transform: rotate(-5deg);*/
+}
+.card.cardV1 .cardInner:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(to top, hsla(var(--color-white), 0.8), transparent);
+}
+.card.cardV2 {
+  /*transform: rotate(5deg);*/
+  position: absolute;
+  bottom: -10%;
+  z-index: -1;
+  left: 50%;
+  width: 90%;
+  height: 100%;
+}
+.card.cardV2 .cardInner {
+  background-image: none;
+  background-color: #1E1F22;
+  padding: 0;
+}
+.card .cardInner {
+  position: relative;
+  height: 100%;
+  padding: 2rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: hsl(var(--color-bg));
+  background-image: url("/spiral.svg");
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card .cardInner .cardTitle {
+  font-size: var(--fs-xs);
+  color: hsl(var(--color-alert));
+  font-weight: var(--fw-bold);
+}
+.card .cardInner .cardSectionTitle {
+  font-size: var(--fs-xxs);
+  color: hsl(var(--color-black));
+  font-weight: var(--fw-bold);
+}
+.card .cardInner .cardDesc {
+  font-size: var(--fs-xxs);
+  color: hsl(var(--color-black));
+  font-weight: var(--fw-bold);
+}
+.card .cardInner p {
+  position: relative;
+  overflow: hidden;
+  max-height: 14rem;
+  font-size: var(--fs-xxs);
+  color: hsl(var(--color-body));
+}
+.card .cardInner p:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, hsla(var(--color-bg), 1) 10%, transparent 50%);
+}
+.card .cardInner hr {
+  margin: 1rem 0;
+  border: 0;
+}
+.card .cardInner a, .card .cardInner span {
+  display: block;
+  font-size: var(--fs-xxs);
+  color: hsl(var(--color-body));
+  margin: 0.5rem 0;
+}
+.card .figure {
+  position: absolute;
+  right: -2rem;
+  top: 15%;
+  width: 7rem;
+  height: 7rem;
+  border: 2px solid hsl(var(--color-white));
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 1rem 5rem 1rem hsla(var(--color-black), 0.2);
+  transition: all 0.3s ease;
+}
+.card .figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .pseudo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.card .pseudo > * {
+  display: inline-block;
+  margin: 0;
+  width: 6rem;
+  height: 1.5rem;
+  background-color: hsl(0, 0%, 90%);
+}
+.card .pseudo > *:nth-child(15n+1) {
+  width: 6rem;
+}
+.card .pseudo > *:nth-child(15n+2) {
+  width: 4rem;
+}
+.card .pseudo > *:nth-child(15n+3) {
+  width: 3rem;
+}
+.card .pseudo > *:nth-child(15n+4) {
+  width: 8rem;
+}
+.card .pseudo > *:nth-child(15n+5) {
+  width: 2rem;
+}
+.card .pseudo > *:nth-child(15n+6) {
+  width: 4rem;
+}
+.card .pseudo > *:nth-child(15n+7) {
+  width: 5rem;
+}
+.card .pseudo > *:nth-child(15n+8) {
+  width: 5rem;
+}
+.card .pseudo > *:nth-child(15n+9) {
+  width: 3rem;
+}
+.card .pseudo > *:nth-child(15n+10) {
+  width: 6rem;
+}
+.card .pseudo > *:nth-child(15n+11) {
+  width: 1rem;
+}
+.card .pseudo > *:nth-child(15n+12) {
+  width: 3rem;
+}
+.card .pseudo > *:nth-child(15n+13) {
+  width: 2rem;
+}
+.card .pseudo > *:nth-child(15n+14) {
+  width: 8rem;
+}
+.card .pseudo > *:nth-child(15n+15) {
+  width: 10rem;
+}
+
+.cta {
+  margin-bottom: 3rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.links a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  color: hsl(var(--color-body));
+  font-size: var(--fs-xs);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.links a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: hsl(var(--color-primary));
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.links a:hover {
+  color: hsl(var(--color-primary));
+}
+.links a:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}

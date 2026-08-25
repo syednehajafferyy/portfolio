@@ -6,7 +6,7 @@ import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
-import styles from './BoldTitle.module.scss';
+import styles from './BoldTitle.module.css';
 import Container from "@/components/UI/Layout/Layout";
 import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
 import Blobs from "@/components/UI/Elements/Blobs/Blobs";

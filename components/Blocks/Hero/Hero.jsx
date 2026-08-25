@@ -7,7 +7,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {DrawSVGPlugin} from "gsap/DrawSVGPlugin";
 import {SplitText} from "gsap/SplitText";
 
-import styles from './Hero.module.scss'
+import styles from './Hero.module.css'
 import Image from "next/image";
 import commonConfig from '@/database/config/metadata.json';
 import FadeIn from "@/components/UI/FadeIn/FadeIn";
@@ -149,7 +149,7 @@ export default function Hero() {
                     <div className={styles.inner}>
                         <div className={styles.title}>
                             <h1 ref={textRef}>
-                                I&apos;m {config.personal?.name || 'Neha'} <span className={`${styles.icon}`}>
+                                I&apos;m {config.personal?.name || 'Syed'} <span className={`${styles.icon}`}>
                                     <span className={styles.reveal}></span>
                                     <Image
                                         src="/hero-image.jpg"
@@ -159,7 +159,7 @@ export default function Hero() {
                                         priority
                                         className={styles.heroImg}
                                     />
-                                </span> <br/> Creative Frontend Developer.
+                                </span> <br/> {config.personal?.role || 'Full Stack & Creative Developer'}.
                             </h1>
                             <p ref={descRef}>{config.metadata?.description || "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance."}</p>
                         </div>

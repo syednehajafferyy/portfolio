@@ -1,4 +1,4 @@
-import styles from './Logo.module.scss';
+import styles from './Logo.module.css';
 import Link from 'next/link';
 import commonConfig from '@/database/config/metadata.json';
 

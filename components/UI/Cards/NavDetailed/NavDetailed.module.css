@@ -1,0 +1,76 @@
+.ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
+  padding-left: 0;
+}
+@media (max-width: 1199px) {
+  .ul {
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .ul {
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  .ul li:nth-child(1), .ul li:nth-child(2) {
+    grid-column: 2/3;
+  }
+}
+.ul li a, .ul li button {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  border: 0;
+  background: transparent;
+  text-align: left;
+}
+.ul li a:hover, .ul li button:hover {
+  cursor: pointer;
+}
+
+.title {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 1rem;
+  color: hsl(var(--color-white));
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-sm);
+}
+@media (max-width: 767px) {
+  .title {
+    margin-bottom: 0;
+  }
+}
+.title span {
+  display: block;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+a:hover .title span, button:hover .title span {
+  transform: translateY(-100%);
+}
+.title span:after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+a:hover .title, button:hover .title {
+  color: hsl(var(--color-primary));
+}
+
+.description {
+  color: hsl(var(--color-body));
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-xs);
+}
+@media (max-width: 767px) {
+  .description {
+    display: none;
+  }
+}

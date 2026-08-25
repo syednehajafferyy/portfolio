@@ -12,11 +12,11 @@ import { FreeMode } from 'swiper/modules';
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from './Gallery.module.scss';
+import styles from './Gallery.module.css';
 
-import 'swiper/scss';
-import 'swiper/scss/pagination';
-import 'swiper/scss/free-mode';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/free-mode';
 
 import Title from "@/components/UI/Elements/Title/Title";
 import ImageTip from "@/components/UI/Elements/ImageTip/ImageTip";

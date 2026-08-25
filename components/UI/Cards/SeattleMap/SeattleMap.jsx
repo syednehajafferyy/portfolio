@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import styles from './SeattleMap.module.scss';
+import styles from './SeattleMap.module.css';
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

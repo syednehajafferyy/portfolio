@@ -1,5 +1,5 @@
 import React  from 'react';
-import styles from './Card2.module.scss';
+import styles from './Card2.module.css';
 import Link from "next/link";
 
 export default function Card2({title, description, date, url}) {

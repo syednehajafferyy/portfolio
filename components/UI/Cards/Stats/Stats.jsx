@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import styles from './Stats.module.scss';
+import styles from './Stats.module.css';
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

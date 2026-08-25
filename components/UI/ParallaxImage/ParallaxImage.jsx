@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getRandomValue } from "@/utils/utils.js";
 
 import Image from "next/image";
-import styles from './ParallaxImage.module.scss';
+import styles from './ParallaxImage.module.css';
 export default function ParallaxImage({ src, alt, width, height, className}) {
     const container = useRef();
     const image = useRef();

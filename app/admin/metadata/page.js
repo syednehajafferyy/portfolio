@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from '../admin.module.scss';
+import styles from '../admin.module.css';
 
 export default function MetadataAdmin() {
   const [formData, setFormData] = useState({

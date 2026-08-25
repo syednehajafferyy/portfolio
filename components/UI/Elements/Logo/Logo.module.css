@@ -1,0 +1,55 @@
+.logo {
+  --spin-text: hsl(var(--color-primary));
+  --inner-circle: hsl(var(--color-black));
+  --inner-stroke: hsl(var(--color-black));
+  --inner-path: hsl(var(--color-primary));
+  display: block;
+  height: auto;
+}
+@media (max-width: 767px) {
+  .logo {
+    max-width: 10rem;
+  }
+}
+.logo .outer {
+  transform-origin: 50% 50%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.logo .spin {
+  animation: freeRotate 20s linear infinite;
+  transform-origin: 50% 50%;
+}
+.logo .spin path {
+  fill: var(--spin-text);
+}
+.logo .inner circle {
+  fill: var(--inner-circle);
+  stroke: var(--inner-stroke);
+}
+.logo .inner path {
+  fill: var(--inner-path);
+}
+.logo:hover .spin {
+  animation-play-state: paused;
+  animation: revertRotate 5s linear infinite;
+}
+.logo:hover .outer {
+  transform: scale(1.1);
+}
+
+@keyframes freeRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes revertRotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

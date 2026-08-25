@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import styles from './Item.module.scss';
+import styles from './Item.module.css';
 export default function Item({position, company, duration, location, image, url, responsibilities, color}) {
 
     return (

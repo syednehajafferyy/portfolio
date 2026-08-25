@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import styles from './CodepenShowcase.module.scss';
+import styles from './CodepenShowcase.module.css';
 
 import Title from "@/components/UI/Elements/Title/Title";
 import Container from "@/components/UI/Layout/Layout";

@@ -1,4 +1,4 @@
-import styles from './Button.module.scss';
+import styles from './Button.module.css';
 import Link from "next/link";
 
 export default function FancyButton({element, type, link, target, theme, isEnabled, children, onClick}) {

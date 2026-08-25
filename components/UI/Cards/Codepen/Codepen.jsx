@@ -1,8 +1,10 @@
 import React, { useEffect }  from 'react';
 import { useScript } from "@uidotdev/usehooks";
 
-export default function Codepen({url}) {
-    const hash = url.split("/").reverse()[0];
+export default function Codepen({url, user}) {
+    const parts = url.split("/").filter(Boolean);
+    const hash = parts[parts.length - 1];
+    const username = user || (parts.length >= 3 ? parts[parts.length - 3] : "codepen");
     const CodePenScript = useScript(
         "https://static.codepen.io/assets/embed/ei.js"
     );
@@ -15,7 +17,7 @@ export default function Codepen({url}) {
     return <p className="codepen"
               data-height="400"
               data-default-tab="result"
-              data-user="yasingencnet"
+              data-user={username}
               data-slug-hash={hash}>
 
     </p>

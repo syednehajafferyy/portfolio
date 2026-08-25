@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import styles from './About.module.scss';
+import styles from './About.module.css';
 import Title from "@/components/UI/Elements/Title/Title";
 import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
 import SeattleMap from "@/components/UI/Cards/SeattleMap/SeattleMap";

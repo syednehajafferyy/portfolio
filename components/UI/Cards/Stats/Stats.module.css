@@ -1,0 +1,44 @@
+.stats {
+  position: relative;
+  background: hsla(var(--color-black), 1) url("/card-bg-1.svg") no-repeat;
+  background-size: 150%;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+  animation: moveBg 5s ease infinite;
+}
+@media (max-width: 767px) {
+  .stats {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+}
+@keyframes moveBg {
+  0% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+.stats .stat {
+  color: hsla(var(--color-white), 1);
+}
+.stats .stat:nth-child(even) {
+  text-align: right;
+}
+.stats .statValue {
+  display: block;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-regular);
+}
+.stats .statDesc {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+}

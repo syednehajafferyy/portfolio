@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import styles from './admin.module.scss';
+import styles from './admin.module.css';
 
 export default function AdminLayout({ children }) {
   const pathname = usePathname();

@@ -1,0 +1,220 @@
+.footer {
+  position: relative;
+  background: hsl(var(--color-bg-alt));
+  padding: var(--y-spacing) var(--x-spacing) 3rem;
+  overflow: hidden;
+  border-top: 1px solid hsla(var(--color-white), 0.1);
+}
+@media (min-width: 576px) {
+  .footer {
+    padding: var(--y-spacing) var(--x-spacing) 9rem;
+  }
+}
+.footer .inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-areas: "connect nav" "bottom bottom";
+  grid-template-columns: 1fr 2fr;
+}
+@media (max-width: 1199px) {
+  .footer .inner {
+    grid-template-areas: "connect" "nav" "bottom";
+    grid-template-columns: 1fr;
+    gap: var(--x-spacing);
+  }
+}
+.footer .connect {
+  grid-area: connect;
+}
+@media (max-width: 767px) {
+  .footer .connect {
+    margin-bottom: 3rem;
+  }
+}
+.footer .nav {
+  grid-area: nav;
+}
+.footer .bottom {
+  grid-area: bottom;
+  text-align: center;
+  padding: var(--y-spacing) 3rem 3rem;
+}
+@media (max-width: 1199px) {
+  .footer .bottom {
+    padding: var(--x-spacing) 3rem 3rem;
+  }
+}
+
+.email:after, .copyright a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: hsl(var(--color-primary));
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.copyright {
+  color: hsl(var(--color-body));
+  font-size: var(--fs-xs);
+  margin-bottom: 3rem;
+}
+.copyright a {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+.copyright a:hover {
+  color: hsl(var(--color-primary));
+}
+.copyright a:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.title {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: hsl(var(--color-white));
+  font-size: var(--fs-xl);
+}
+.title span:not([class]) {
+  opacity: 0.5;
+}
+@media (max-width: 767px) {
+  .title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.email {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: hsl(var(--color-body));
+  font-size: var(--fs-sm);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.email:hover {
+  color: hsl(var(--color-primary));
+}
+.email:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.verse {
+  color: hsl(var(--color-primary-alt));
+  font-size: var(--fs-xs);
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 6rem;
+}
+
+.skeleton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 767px) {
+  .skeleton {
+    display: none;
+  }
+}
+.skeleton .eyeball {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #ffbebe;
+  border-radius: 50%;
+  scale: 0;
+  transition: all 0.3s linear;
+}
+.skeleton .eyeball.left {
+  left: 6%;
+  top: 62%;
+}
+.skeleton .eyeball.right {
+  left: 15.5%;
+  top: 56.4%;
+}
+.skeleton.animating .eyeball {
+  scale: 1;
+  animation: skullEye 1.8s infinite;
+}
+@keyframes skullEye {
+  0%, 100% {
+    box-shadow: 0 0 4px 8px hsl(var(--color-alert));
+  }
+  50% {
+    box-shadow: 0 0 4px 4px hsl(var(--color-alert));
+  }
+}
+
+.capillaryContainer {
+  --stroke: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.capillary {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.1;
+  transition: opacity 0.2s linear;
+}
+.capillary path {
+  stroke: var(--stroke);
+}
+
+.capillary1 {
+  bottom: 50%;
+  right: 50%;
+  margin-bottom: -300px;
+  margin-right: -400px;
+  animation: capillaryShape1 20s infinite alternate linear;
+}
+
+.capillary2 {
+  top: 50%;
+  left: 50%;
+  margin-top: -600px;
+  margin-left: -475px;
+  transform: rotate(15deg);
+  animation: capillaryShape2 20s infinite alternate linear;
+}
+
+@keyframes capillaryShape1 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(20%) rotate(20deg);
+  }
+}
+@keyframes capillaryShape2 {
+  0% {
+    transform: translateY(0) rotate(15deg);
+  }
+  100% {
+    transform: translateY(-20%) rotate(20deg);
+  }
+}

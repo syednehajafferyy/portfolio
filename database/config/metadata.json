@@ -1,32 +1,32 @@
 {
   "metadata": {
-    "name": "Neha",
-    "title": "Neha Zehra - Creative Frontend Developer",
+    "name": "Syed",
+    "title": "Syed - Full Stack & Creative Developer",
     "description": "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.",
-    "timeZone": "America/Los_Angeles",
+    "timeZone": "America/New_York",
     "locale": "en-US"
   },
   "personal": {
-    "name": "Neha",
-    "surname": "Zehra",
-    "role": "Creative Frontend Developer",
+    "name": "Syed",
+    "surname": "",
+    "role": "Full Stack Developer",
     "experience": 2,
-    "email": "nehazehra@example.com",
-    "phone": "+1234567890",
-    "city": "Seattle",
-    "state": "WA",
+    "email": "contact@example.com",
+    "phone": "+1 (555) 000-0000",
+    "city": "New York",
+    "state": "NY",
     "country": "USA",
-    "username": "@nehazehra",
-    "resumeURL": "https://docs.google.com/"
+    "username": "@syed",
+    "resumeURL": "#"
   },
   "social": {
     "twitter": "https://twitter.com/",
     "instagram": "",
-    "linkedin": "https://www.linkedin.com/",
+    "linkedin": "https://linkedin.com/",
     "github": "https://github.com/",
     "codepen": "https://codepen.io/"
   },
   "content": {
-    "verse": "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance."
+    "verse": "I develop accessible, responsive, interactive, and animated web applications with a strong focus on performance and modern design."
   }
 }

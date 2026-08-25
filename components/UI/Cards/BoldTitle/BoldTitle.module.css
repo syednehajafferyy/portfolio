@@ -1,0 +1,56 @@
+.section {
+  position: relative;
+  background-color: hsl(var(--color-bg-alt));
+  padding: var(--x-spacing) 0;
+  max-width: 100dvw;
+  overflow: hidden;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--x-spacing);
+}
+
+.boldTitle {
+  font-size: clamp(4.4rem, 10dvw, var(--fs-xxl));
+  color: hsl(var(--color-white));
+  line-height: 1.1cap;
+  text-align: center;
+}
+.boldTitle span {
+  display: block;
+}
+.boldTitle span.boldTitleLeft > div, .boldTitle span.boldTitleRight > div {
+  transition: all 0.3s ease;
+}
+.boldTitle span.boldTitleLeft > div:hover, .boldTitle span.boldTitleRight > div:hover {
+  transform: scale(1.3);
+}
+.boldTitle span.boldTitleLeft > div:has(+ :hover), .boldTitle span.boldTitleLeft > div:hover + div, .boldTitle span.boldTitleRight > div:has(+ :hover), .boldTitle span.boldTitleRight > div:hover + div {
+  transform: scale(1.2);
+}
+.boldTitle span.boldTitleLeft > div:has(+ div + :hover), .boldTitle span.boldTitleLeft > div:hover + div + div, .boldTitle span.boldTitleRight > div:has(+ div + :hover), .boldTitle span.boldTitleRight > div:hover + div + div {
+  transform: scale(1.1);
+}
+.boldTitle span:nth-child(2) {
+  font-style: italic;
+}
+
+.paragraph {
+  font-size: var(--fs-sm);
+  color: hsl(var(--color-body));
+  max-width: 35ch;
+}
+.paragraph.paragraphAlt {
+  margin-left: auto;
+}
+
+.blob {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  background: conic-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 100%, 0.1));
+}

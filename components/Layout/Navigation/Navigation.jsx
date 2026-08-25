@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-import styles from './Navigation.module.scss'
+import styles from './Navigation.module.css'
 import Link from "next/link";
 import PageList from '@/database/PageList.json';
 

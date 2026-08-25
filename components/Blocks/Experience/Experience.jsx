@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import styles from './Experience.module.scss';
+import styles from './Experience.module.css';
 import Item from "@/components/Blocks/Experience/Item/Item";
 import Title from "@/components/UI/Elements/Title/Title";
 import initialCompanies from '@/database/Companies.json';

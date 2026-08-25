@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from './BlogPosts.module.scss';
+import styles from './BlogPosts.module.css';
 
 import Title from "@/components/UI/Elements/Title/Title";
 import Card2 from "@/components/UI/Cards/Card2/Card2";

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Ticker.module.scss';
+import styles from './Ticker.module.css';
 
 import Marquee from "react-fast-marquee";
 

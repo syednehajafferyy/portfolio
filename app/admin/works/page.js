@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from '../admin.module.scss';
+import styles from '../admin.module.css';
 import ImageUploader from '@/components/Admin/ImageUploader';
 
 export default function WorksAdmin() {

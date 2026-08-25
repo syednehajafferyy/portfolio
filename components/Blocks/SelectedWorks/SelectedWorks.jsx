@@ -11,7 +11,7 @@ import Link from "next/link";
 import initialWorks from '@/database/Works.json';
 import commonConfig from "@/database/config/metadata.json";
 
-import styles from './SelectedWorks.module.scss';
+import styles from './SelectedWorks.module.css';
 
 import Title from "@/components/UI/Elements/Title/Title";
 import Magnet from "@/components/UI/Magnet/Magnet";

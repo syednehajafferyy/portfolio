@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import styles from './Header.module.scss'
+import styles from './Header.module.css'
 import Logo from '@/components/UI/Elements/Logo/Logo';
 import Navigation from '@/components/Layout/Navigation/Navigation';
 import commonConfig from '@/database/config/metadata.json';
