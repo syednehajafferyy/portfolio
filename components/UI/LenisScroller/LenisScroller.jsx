@@ -1,11 +1,15 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Lenis from "@studio-freight/lenis";
 
 export default function LenisScroller() {
+    const pathname = usePathname();
 
     useEffect(() => {
+        if (pathname?.startsWith('/admin')) return;
+
         const lenisScroll = new Lenis({
             lerp: 0,
             //wheelMultiplier: 0.8
@@ -22,7 +26,7 @@ export default function LenisScroller() {
         return () => {
             lenisScroll.destroy();
         };
-    }, []);
+    }, [pathname]);
 
     return <></>;
 }

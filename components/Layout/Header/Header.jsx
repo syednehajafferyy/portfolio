@@ -1,12 +1,16 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './Header.module.css'
 import Logo from '@/components/UI/Elements/Logo/Logo';
 import Navigation from '@/components/Layout/Navigation/Navigation';
 import commonConfig from '@/database/config/metadata.json';
+
 export default function Header() {
+    const pathname = usePathname();
     const [currentTime, setCurrentTime] = useState('');
+
     useEffect(() => {
         // Get current time in Seattle, WA (PST) on the client side
         const timeZone = commonConfig.metadata.timeZone;
@@ -25,6 +29,10 @@ export default function Header() {
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     };
+
+    if (pathname?.startsWith('/admin')) {
+        return null;
+    }
 
     return (
         <header className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''}`}>

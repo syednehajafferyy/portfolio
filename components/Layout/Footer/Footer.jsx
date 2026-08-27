@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './Footer.module.css';
 import Image from "next/image";
 import Link from "next/link";
@@ -18,6 +19,7 @@ import WeatherAPI from "@/components/UI/Elements/WeatherAPI/WeatherAPI";
 import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 
 export default function Footer() {
+    const pathname = usePathname();
     gsap.registerPlugin(ScrollTrigger);
 
     const container = useRef(null);
@@ -41,6 +43,7 @@ export default function Footer() {
 
     // GSAP
     useGSAP(() => {
+        if (!container.current || !footerBottom.current || !skeleton.current) return;
         // Skeleton
         gsap.from(skeleton.current, {
             scrollTrigger: {
@@ -50,11 +53,17 @@ export default function Footer() {
             yPercent: 100,
             duration: 1,
             onComplete: () => {
-                skeleton.current.classList.add(`${styles.animating}`);
+                if (skeleton.current) {
+                    skeleton.current.classList.add(`${styles.animating}`);
+                }
             }
         });
 
     }, {scope: container});
+
+    if (pathname?.startsWith('/admin')) {
+        return null;
+    }
 
     return (
         <footer className={styles.footer} ref={container} id={'footer'}>
