@@ -9,6 +9,7 @@ export default function AdminDashboard() {
     skillsCount: 0,
     experienceCount: 0,
     projectsCount: 0,
+    graphicDesignCount: 0,
     ownerName: '',
     role: '',
   });
@@ -16,22 +17,25 @@ export default function AdminDashboard() {
   useEffect(() => {
     async function loadStats() {
       try {
-        const [metaRes, skillsRes, expRes, worksRes] = await Promise.all([
+        const [metaRes, skillsRes, expRes, worksRes, gdRes] = await Promise.all([
           fetch('/api/metadata'),
           fetch('/api/skills'),
           fetch('/api/companies'),
           fetch('/api/works'),
+          fetch('/api/graphic-design'),
         ]);
 
         const meta = await metaRes.json();
         const skills = await skillsRes.json();
         const exp = await expRes.json();
         const works = await worksRes.json();
+        const gd = await gdRes.json();
 
         setStats({
           skillsCount: Array.isArray(skills) ? skills.length : 0,
           experienceCount: Array.isArray(exp) ? exp.length : 0,
           projectsCount: Array.isArray(works) ? works.length : 0,
+          graphicDesignCount: Array.isArray(gd) ? gd.length : 0,
           ownerName: meta?.personal?.surname ? `${meta.personal.name} ${meta.personal.surname}` : (meta?.personal?.name || 'Neha Zehra'),
           role: meta?.personal?.role || 'Creative Developer',
         });
@@ -81,6 +85,14 @@ export default function AdminDashboard() {
             Manage Projects →
           </Link>
         </div>
+
+        <div className={styles.statCard}>
+          <h3>Graphic Design Posts</h3>
+          <div className={styles.number}>{stats.graphicDesignCount}</div>
+          <Link href="/admin/graphic-design" style={{ fontSize: '1.2rem', color: '#ffd600', display: 'inline-block', marginTop: '0.5rem' }}>
+            Manage Designs →
+          </Link>
+        </div>
       </div>
 
       <div className={styles.cardSection}>
@@ -123,6 +135,16 @@ export default function AdminDashboard() {
             </p>
             <Link href="/admin/works" className={styles.btnSecondary} style={{ display: 'inline-block' }}>
               Manage Projects →
+            </Link>
+          </div>
+
+          <div style={{ background: '#11141c', padding: '2rem', borderRadius: '8px', border: '1px solid #262c3a' }}>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '1rem' }}>Graphic Design Artworks</h3>
+            <p style={{ color: '#94a3b8', fontSize: '1.3rem', marginBottom: '1.5rem' }}>
+              Add graphic design posts, posters, logos, branding assets, images, and category tags.
+            </p>
+            <Link href="/admin/graphic-design" className={styles.btnSecondary} style={{ display: 'inline-block' }}>
+              Manage Graphic Design →
             </Link>
           </div>
         </div>

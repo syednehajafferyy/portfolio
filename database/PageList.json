@@ -35,6 +35,15 @@
     "image": "",
     "link": "#projects"
   },
+  "graphicDesign": {
+    "isActive": true,
+    "showOnNavigation": true,
+    "showOnFooter": true,
+    "title": "Graphic Design",
+    "description": "Explore my graphic design creations, branding concepts, and visual artworks.",
+    "image": "",
+    "link": "#graphic-design"
+  },
   "contact": {
     "isActive": true,
     "showOnNavigation": true,

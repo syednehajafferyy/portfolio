@@ -7,8 +7,8 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function GET() {
-  const data = await readData('metadata');
-  return NextResponse.json(data || {}, {
+  const data = await readData('GraphicDesign');
+  return NextResponse.json(data || [], {
     headers: {
       'Cache-Control': 'no-store, max-age=0, must-revalidate'
     }
@@ -22,8 +22,8 @@ export async function PUT(request) {
   }
 
   try {
-    const updatedMetadata = await request.json();
-    const result = await writeData('metadata', updatedMetadata);
+    const updatedData = await request.json();
+    const result = await writeData('GraphicDesign', updatedData);
 
     try {
       revalidatePath('/', 'layout');
@@ -32,12 +32,12 @@ export async function PUT(request) {
 
     return NextResponse.json({
       success: true,
-      data: updatedMetadata,
+      data: updatedData,
       synced: result.synced,
       warning: result.warning
     });
   } catch (error) {
-    console.error('API Error updating metadata:', error);
-    return NextResponse.json({ error: error.message || 'Failed to update metadata' }, { status: 500 });
+    console.error('API Error updating graphic design posts:', error);
+    return NextResponse.json({ error: error.message || 'Failed to update graphic design posts' }, { status: 500 });
   }
 }

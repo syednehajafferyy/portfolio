@@ -82,6 +82,9 @@ export default function AdminLayout({ children }) {
           <Link href="/admin/works" className={pathname === '/admin/works' ? styles.active : ''}>
             Projects
           </Link>
+          <Link href="/admin/graphic-design" className={pathname === '/admin/graphic-design' ? styles.active : ''}>
+            Graphic Design
+          </Link>
         </nav>
 
         <div style={{ display: 'flex', gap: '1rem' }}>

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "title": "Brand Identity & Visual System",
+    "category": "Branding & Typography",
+    "description": "Modern typography, logo design, and visual brand identity system created for digital products.",
+    "image": "/reference/sample.jpg",
+    "url": "",
+    "date": "2024",
+    "status": true,
+    "tags": "Branding, Typography, Photoshop"
+  },
+  {
+    "id": "2",
+    "title": "Creative Poster & Editorial Layout",
+    "category": "Poster & Print",
+    "description": "Experimental poster layouts, color palettes, and artwork compositions.",
+    "image": "/reference/sample.jpg",
+    "url": "",
+    "date": "2024",
+    "status": true,
+    "tags": "Poster, Graphic Design, Illustrator"
+  },
+  {
+    "id": "3",
+    "title": "Social Media Visual Campaign",
+    "category": "Digital Media & Banner",
+    "description": "Engaging social media graphics, banner concepts, and promotional visual content.",
+    "image": "/reference/sample.jpg",
+    "url": "",
+    "date": "2024",
+    "status": true,
+    "tags": "Social Media, Banner, UI Art"
+  }
+]

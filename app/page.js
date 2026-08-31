@@ -5,6 +5,7 @@ import Resume from "@/components/Blocks/Resume/Resume";
 import SkillSet from "@/components/Blocks/SkillSet/SkillSet";
 import BoldTitle from "@/components/UI/Cards/BoldTitle/BoldTitle";
 import Gallery from "@/components/Blocks/Gallery/Gallery";
+import GraphicDesign from "@/components/Blocks/GraphicDesign/GraphicDesign";
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -18,6 +19,8 @@ export default function Home() {
             <BoldTitle/>
             <Resume/>
             <Gallery/>
+            <GraphicDesign/>
         </>
     )
 }
+
