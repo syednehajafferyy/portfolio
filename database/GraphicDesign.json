@@ -1,16 +1,5 @@
 [
   {
-    "id": "1",
-    "title": "Brand Identity & Visual System",
-    "category": "Branding & Typography",
-    "description": "Modern typography, logo design, and visual brand identity system created for digital products.",
-    "image": "/reference/sample.jpg",
-    "url": "",
-    "date": "2024",
-    "status": true,
-    "tags": "Branding, Typography, Photoshop"
-  },
-  {
     "id": "2",
     "title": "Creative Poster & Editorial Layout",
     "category": "Poster & Print",
