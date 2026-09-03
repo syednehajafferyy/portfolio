@@ -31,5 +31,16 @@
     "date": "2024",
     "status": true,
     "tags": "Social Media, Banner, UI Art"
+  },
+  {
+    "title": "Industrial edge",
+    "category": "Product advertisement",
+    "description": "",
+    "image": "/uploads/1788435001801_industrial_edge_sep.jpg",
+    "url": "",
+    "date": "2026",
+    "tags": "",
+    "status": true,
+    "id": "1788435006596"
   }
 ]
